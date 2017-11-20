@@ -134,7 +134,8 @@ public class Huracan
     	return nombre.compareToIgnoreCase(h.darNombre());
 
 =======
-        // TODO Completar segï¿½n la documentaciï¿½n del mï¿½>>>>>>> parent of 4f42d80... creando metodos comparar
+        // TODO Completar según la documentación del método
+>>>>>>> parent of 4f42d80... creando metodos comparar
     }
 
     /**
@@ -146,6 +147,7 @@ public class Huracan
      */
     public int compararPorDanios( Huracan h )
     {
+<<<<<<< HEAD
     	verificarInvariante();
     	if(costoEstimadoDanios==h.darCostoEstimadoDanios())
     			return 0;
@@ -157,6 +159,9 @@ public class Huracan
 
 
 
+=======
+        // TODO Completar según la documentación del método
+>>>>>>> parent of 4f42d80... creando metodos comparar
     }
 
     /**
