@@ -1,13 +1,13 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * $Id: PanelListaHuracanes.java,v 1.1 2008/08/23 10:25:41 ju-cort1 Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n
+ * Licenciado bajo el esquema Academic Free License version 2.1
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
  * Ejercicio: n7_huracanes
- * Autor: Juan Camilo Cortés Medina - 05-ago-2008
+ * Autor: Juan Camilo Cortï¿½s Medina - 05-ago-2008
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 package uniandes.cupi2.huracanes.interfaz;
@@ -22,7 +22,7 @@ import javax.swing.event.*;
 import uniandes.cupi2.huracanes.mundo.Huracan;
 
 /**
- * Es el panel donde se muestra la lista de huracanes y están los botones para interactuar con la lista
+ * Es el panel donde se muestra la lista de huracanes y estï¿½n los botones para interactuar con la lista
  */
 public class PanelListaHuracanes extends JPanel implements ListSelectionListener
 {
@@ -30,6 +30,8 @@ public class PanelListaHuracanes extends JPanel implements ListSelectionListener
     // Atributos
     // -----------------------------------------------------------------
 
+
+    ArrayList listaHuracanes;
     /**
      * Es una referencia a la clase principal de la interfaz
      */
@@ -42,13 +44,16 @@ public class PanelListaHuracanes extends JPanel implements ListSelectionListener
     /**
      * Es la lista que se muestra
      */
-    // TODO Declarar atributo que modela la lista de huracanes
+    //
     // nombre: listaHuracanes
 
+    private JList JlistaHuracanes;
     /**
-     * Componente de desplazamiento para contener la lista gráfica
+     * Componente de desplazamiento para contener la lista grï¿½fica
      */
     private JScrollPane scroll;
+
+    private Huracan huracan;
 
     // -----------------------------------------------------------------
     // Constructores
@@ -65,32 +70,49 @@ public class PanelListaHuracanes extends JPanel implements ListSelectionListener
         setLayout( new BorderLayout( ) );
         setBorder( new CompoundBorder( new EmptyBorder( 4, 3, 3, 3 ), new TitledBorder( "Huracanes en el sistema" ) ) );
 
-        // TODO
+        //
         // (1) Crear la lista y (2) agregar al panel como listener de la lista
+        JlistaHuracanes = new JList();
+        JlistaHuracanes.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        JlistaHuracanes.addListSelectionListener(this);
 
-        // TODO
+
+
+        //
         // (1) Crear y configurar un scroll pane para que contenga la lista
         // (2) Agregar el scroll al panel en el centro (Tener en cuenta que el layout es BorderLayout)
+        JScrollPane scroll = new JScrollPane();
+        scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        scroll.setBorder(new CompoundBorder(new EmptyBorder(3,3,3,3),
+                new LineBorder(Color.BLACK, 1)));
+        scroll.getViewport().add(JlistaHuracanes);
+
+        add(scroll, BorderLayout.CENTER);
+
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Actualiza la lista de huracanes que se está mostrando
+     * Actualiza la lista de huracanes que se estï¿½ mostrando
      * @param nuevaLista es una lista con los huracanes que deben mostrarse
      */
     public void refrescarLista( ArrayList nuevaLista )
     {
-        // TODO Completar según enunciado
-        // Agregue los nuevos elementos (entran como parámetro),
-        // y recuerde establecer el índice seleccionado en el 0.
+        //
+        // Agregue los nuevos elementos (entran como parï¿½metro),
+        // y recuerde establecer el ï¿½ndice seleccionado en el 0.
+        JlistaHuracanes.setListData( nuevaLista.toArray( ) );
+        JlistaHuracanes.setSelectedIndex( 0 );
+
     }
 
     /**
      * Selecciona un elemento de la lista
-     * @param seleccionado es la posición del elemento que se debe seleccionar
+     * @param seleccionado es la posiciï¿½n del elemento que se debe seleccionar
      */
     public void seleccionar( int seleccionado )
     {
@@ -99,12 +121,16 @@ public class PanelListaHuracanes extends JPanel implements ListSelectionListener
     }
 
     /**
-     * actualiza la información del panel de información de huracanes, según el huracán que se seleccionó en la lista de huracanes
-     * @param e es el evento de cambio el ítem seleccionado en la lista
+     * actualiza la informaciï¿½n del panel de informaciï¿½n de huracanes, segï¿½n el huracï¿½n que se seleccionï¿½ en la lista de huracanes
+     * @param e es el evento de cambio el ï¿½tem seleccionado en la lista
      */
     public void valueChanged( ListSelectionEvent e )
     {
-        // TODO Completar según enunciado
-        // Apoyese en el método InterfazHuracanes.verDatos( Huracan )
+        //
+        // Apoyese en el mï¿½todo InterfazHuracanes.verDatos( Huracan )
+        if(JlistaHuracanes.getSelectedValue()!=null){
+      		Huracan huracanSeleccionado = (Huracan)JlistaHuracanes.getSelectedValue();
+      		principal.verDatos(huracanSeleccionado);
+        }
     }
 }

@@ -126,12 +126,16 @@ public class Huracan
      *         Retorna -1 si el huracï¿½n h tiene un valor "MAYOR" para el nombre. <br>
      *         Retorna 1 si el huracï¿½n h tiene un valor "MENOR" para el nombre. <br>
      */
-    public int compararPorNombre( Huracan h)
+    public int compararPorNombre( Huracan h )
     {
+<<<<<<< HEAD
     	verificarInvariante();
 
     	return nombre.compareToIgnoreCase(h.darNombre());
 
+=======
+        // TODO Completar según la documentación del método
+>>>>>>> parent of 4f42d80... creando metodos comparar
     }
 
     /**
@@ -143,6 +147,7 @@ public class Huracan
      */
     public int compararPorDanios( Huracan h )
     {
+<<<<<<< HEAD
     	verificarInvariante();
     	if(costoEstimadoDanios==h.darCostoEstimadoDanios())
     			return 0;
@@ -154,6 +159,9 @@ public class Huracan
 
 
 
+=======
+        // TODO Completar según la documentación del método
+>>>>>>> parent of 4f42d80... creando metodos comparar
     }
 
     /**
