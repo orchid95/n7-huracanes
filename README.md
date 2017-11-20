@@ -1,2 +1,2 @@
-# n7-huracanes
-proyecto en java.
+# N7-huracanes
+Cupi2 - proyecto en java.
