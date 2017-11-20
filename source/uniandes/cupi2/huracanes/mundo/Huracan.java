@@ -1,19 +1,19 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * $Id: Huracan.java,v 1.4 2008/09/12 11:22:48 jua-gome Exp $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
- * Licenciado bajo el esquema Academic Free License version 2.1 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n
+ * Licenciado bajo el esquema Academic Free License version 2.1
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
  * Ejercicio: n7_huracanes
- * Autor: Juan Camilo Cortés Medina - 05-ago-2008
+ * Autor: Juan Camilo Cortï¿½s Medina - 05-ago-2008
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 package uniandes.cupi2.huracanes.mundo;
 
 /**
- * Esta clase representa un huracán. <br>
+ * Esta clase representa un huracï¿½n. <br>
  * <b> inv: </b> <br>
  * TODO Definir y documentar el invariante de la clase
  */
@@ -24,12 +24,12 @@ public class Huracan
     // --------------------------------------------------------
 
     /**
-     * Nombre del huracán
+     * Nombre del huracï¿½n
      */
     private String nombre;
 
     /**
-     * Categoría del huracán según el sistema Saffir - Simpson
+     * Categorï¿½a del huracï¿½n segï¿½n el sistema Saffir - Simpson
      */
     private int categoria;
 
@@ -39,12 +39,12 @@ public class Huracan
     private int velocidad;
 
     /**
-     * Costo estimado en daños expresado en millones de dólares.
+     * Costo estimado en daï¿½os expresado en millones de dï¿½lares.
      */
     private double costoEstimadoDanios;
 
     /**
-     * La ruta hasta la imagen del huracán
+     * La ruta hasta la imagen del huracï¿½n
      */
     private String imagen;
 
@@ -53,13 +53,13 @@ public class Huracan
     // --------------------------------------------------------
 
     /**
-     * Construye un nuevo huracán con los parámetros indicados <br>
-     * <b>post: </b> Se construyó un huracán con los parámetros indicados
-     * @param nombreP es el nombre del huracán. nombreP != null.
-     * @param categoriaP es la categoría del huracán. 1 <= categoriaP <= 5.
+     * Construye un nuevo huracï¿½n con los parï¿½metros indicados <br>
+     * <b>post: </b> Se construyï¿½ un huracï¿½n con los parï¿½metros indicados
+     * @param nombreP es el nombre del huracï¿½n. nombreP != null.
+     * @param categoriaP es la categorï¿½a del huracï¿½n. 1 <= categoriaP <= 5.
      * @param velocidadP es la velocidad del viento. 0 <= velocidadP.
-     * @param costoEstimadoDaniosP es el costo estimado de daños. 0 <= costoEstimadoDaniosP.
-     * @param imagenP es la ruta a la imagen del huracán. imagenP != null.
+     * @param costoEstimadoDaniosP es el costo estimado de daï¿½os. 0 <= costoEstimadoDaniosP.
+     * @param imagenP es la ruta a la imagen del huracï¿½n. imagenP != null.
      */
     public Huracan( String nombreP, int categoriaP, int velocidadP, double costoEstimadoDaniosP, String imagenP )
     {
@@ -71,12 +71,12 @@ public class Huracan
     }
 
     // --------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // --------------------------------------------------------
 
     /**
-     * Retorna el nombre del huracán
-     * @return el nombre del huracán
+     * Retorna el nombre del huracï¿½n
+     * @return el nombre del huracï¿½n
      */
     public String darNombre( )
     {
@@ -84,8 +84,8 @@ public class Huracan
     }
 
     /**
-     * Retorna la categoría del huracán
-     * @return la categoría del huracán
+     * Retorna la categorï¿½a del huracï¿½n
+     * @return la categorï¿½a del huracï¿½n
      */
     public int darCategoria( )
     {
@@ -93,8 +93,8 @@ public class Huracan
     }
 
     /**
-     * Retorna la velocidad del huracán
-     * @return la velocidad del huracán
+     * Retorna la velocidad del huracï¿½n
+     * @return la velocidad del huracï¿½n
      */
     public int darVelocidad( )
     {
@@ -102,8 +102,8 @@ public class Huracan
     }
 
     /**
-     * Retorna el costoEstimadoDanios del huracán
-     * @return el costoEstimadoDanios del huracán
+     * Retorna el costoEstimadoDanios del huracï¿½n
+     * @return el costoEstimadoDanios del huracï¿½n
      */
     public double darCostoEstimadoDanios( )
     {
@@ -111,8 +111,8 @@ public class Huracan
     }
 
     /**
-     * Retorna la ruta a la imagen del huracán.
-     * @return La imagen del huracán
+     * Retorna la ruta a la imagen del huracï¿½n.
+     * @return La imagen del huracï¿½n
      */
     public String darImagen( )
     {
@@ -120,26 +120,26 @@ public class Huracan
     }
 
     /**
-     * Compara dos huracanes según el nombre. <br>
-     * @param h es el huracán contra el que se está comparando. h != null. <br>
+     * Compara dos huracanes segï¿½n el nombre. <br>
+     * @param h es el huracï¿½n contra el que se estï¿½ comparando. h != null. <br>
      * @return Retorna 0 si los huracanes tienen el mismo nombre. <br>
-     *         Retorna -1 si el huracán h tiene un valor "MAYOR" para el nombre. <br>
-     *         Retorna 1 si el huracán h tiene un valor "MENOR" para el nombre. <br>
+     *         Retorna -1 si el huracï¿½n h tiene un valor "MAYOR" para el nombre. <br>
+     *         Retorna 1 si el huracï¿½n h tiene un valor "MENOR" para el nombre. <br>
      */
     public int compararPorNombre( Huracan h)
     {
     	verificarInvariante();
-    			
+
     	return nombre.compareToIgnoreCase(h.darNombre());
-    	
+
     }
 
     /**
-     * Compara dos huracanes según los daños estimados. <br>
-     * @param h es el huracán contra el que se está comparando. h != null. <br>
-     * @return Retorna 0 si los huracanes tienen el mismo costo estimado en daños. <br>
-     *         Retorna -1 si el huracán h tiene un valor "MAYOR" para el costo estimado en daños. <br>
-     *         Retorna 1 si el huracán h tiene un valor "MENOR" para el costo estimado en daños. <br>
+     * Compara dos huracanes segï¿½n los daï¿½os estimados. <br>
+     * @param h es el huracï¿½n contra el que se estï¿½ comparando. h != null. <br>
+     * @return Retorna 0 si los huracanes tienen el mismo costo estimado en daï¿½os. <br>
+     *         Retorna -1 si el huracï¿½n h tiene un valor "MAYOR" para el costo estimado en daï¿½os. <br>
+     *         Retorna 1 si el huracï¿½n h tiene un valor "MENOR" para el costo estimado en daï¿½os. <br>
      */
     public int compararPorDanios( Huracan h )
     {
@@ -148,38 +148,89 @@ public class Huracan
     			return 0;
     	else if(costoEstimadoDanios>h.darCostoEstimadoDanios())
     		return -1;
-    	else 
+    	else
     		return 1;
-    	
-    	
-    	
-    	
+
+
+
+
     }
 
     /**
-     * Compara dos huracanes según la velocidad. <br>
-     * @param h es el huracán contra el que se está comparando. h != null. <br>
+     * Compara dos huracanes segï¿½n la velocidad. <br>
+     * @param h es el huracï¿½n contra el que se estï¿½ comparando. h != null. <br>
      * @return Retorna 0 si los huracanes tienen la misma velocidad. <br>
-     *         Retorna -1 si el huracán h tiene un valor "MAYOR" para la velocidad. <br>
-     *         Retorna 1 si el huracán h tiene un valor "MENOR" para la velocidad. <br>
+     *         Retorna -1 si el huracï¿½n h tiene un valor "MAYOR" para la velocidad. <br>
+     *         Retorna 1 si el huracï¿½n h tiene un valor "MENOR" para la velocidad. <br>
      */
     public int compararPorVelocidad( Huracan h )
     {
-        // TODO Completar según la documentación del método
+      verificarInvariante();
+
+      if(velocidad==h.darVelocidad())
+      return 0;
+  else if(velocidad>h.darVelocidad())
+    return -1;
+  else
+    return 1;
     }
 
     /**
-     * Retorna una cadena con el nombre del huracán
-     * @return La representación del huracán en String
+     * Retorna una cadena con el nombre del huracï¿½n
+     * @return La representaciï¿½n del huracï¿½n en String
      */
     public String toString( )
     {
-        // TODO Completar según la documentación del método
+        // TODO Completar segï¿½n la documentaciï¿½n del mï¿½todo
     }
 
     // --------------------------------------------------------
     // Invariantes
     // --------------------------------------------------------
 
-    // TODO Declarar, implementar y documentar el método verificarInvariante
+    /**
+     * @param nombreP es el nombre del huracï¿½n. nombreP != null.
+     * @param categoriaP es la categorï¿½a del huracï¿½n. 1 <= categoriaP <= 5.
+     * @param velocidadP es la velocidad del viento. 0 <= velocidadP.
+     * @param costoEstimadoDaniosP es el costo estimado de daï¿½os. 0 <= costoEstimadoDaniosP.
+     * @param imagenP es la ruta a la imagen del huracï¿½n. imagenP != null.
+     * @param h es el huracï¿½n contra el que se estï¿½ comparando. h != null.
+     */
+
+    private boolean categoriaEsValida(){
+    	if(1<=categoria&&categoria<=5)
+    		return true;
+    	else
+		return false;
+    }
+
+    private boolean velocidadEsValida(){
+    	if(0<=velocidad)
+    		return true;
+    	else
+    		return false;
+    }
+
+    private boolean CostoEsValido(){
+    	if(0<=costoEstimadoDanios)
+    		return true;
+    	else
+    		return false;
+    }
+
+
+
+    private void verificarInvariante(){
+    	assert nombre !=null:
+    		"nombre es vacio";
+    	assert categoriaEsValida():
+    		"la categoria es invalida";
+    	assert velocidadEsValida():
+    		"la velocidad es menor que 0";
+    	assert CostoEsValido():
+    		"costo es menor a 0";
+    	assert imagen!= null:
+    		"imagen es vacia";
+
+    }
 }
